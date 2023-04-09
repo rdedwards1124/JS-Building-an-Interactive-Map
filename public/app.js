@@ -3,8 +3,13 @@
 
 
 // Create map
+// Create map:                                                       
+const myMap = L.map('map', {
+    center: [48.868672, 2.342130],
+    zoom: 12,
+});
 
-
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {     maxZoom: 19,     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(myMap);
 
 
 // Add openstreetmap tiles
@@ -15,11 +20,17 @@
 
 
 // Create and add a geolocation marker
+// Create and add a geolocation marker:
+const marker = L.marker([48.87007, 2.346453])
+marker.addTo(myMap).bindPopup('<p1><b>The Hoxton, Paris</b></p1>').openPopup()
 
 
 
 
 // Draw the 2nd arrondissement
+// Draw the 2nd Arrondissement                                          
+
+
 
 
 
